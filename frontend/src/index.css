@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Colors - Professional Financial SaaS (Stripe / Mercury style) */
+  --color-bg-primary: #f9fafb; /* Soft light gray for app background */
+  --color-bg-secondary: #ffffff; /* Pure white for cards and headers */
+  --color-bg-tertiary: #f3f4f6; /* Hover states */
+
+  --color-border: #e5e7eb;
+
+  --color-text-primary: #111827; /* Near black for readability */
+  --color-text-secondary: #4b5563; /* Slate gray for secondary text */
+  --color-text-tertiary: #9ca3af;
+
+  /* Trustworthy, professional accents */
+  --color-primary: #2563eb; /* Corporate Blue */
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-glow: transparent;
+
+  --color-success: #059669; /* Crisp, readable green */
+  --color-success-light: #10b981;
+  --color-success-bg: #ecfdf5;
+
+  --color-error: #dc2626; /* Professional red */
+  --color-error-light: #ef4444;
+  --color-error-bg: #fef2f2;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Typography - Clean, readable */
+  --font-family: "Inter", system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Borders & Shadows - Subtle and sharp */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: none;
+
+  /* Transitions */
+  --transition-fast: 0.1s ease-out;
+  --transition-base: 0.2s ease-out;
+
+  /* Z-Index */
+  --z-fixed: 100;
+  --z-modal: 1000;
+  --z-toast: 2000;
+}
+
+/* Base Styles & Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.app-content--auth {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+/* Professional component backgrounds */
+[class*="header"] {
+  background: var(--color-bg-secondary) !important;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+[class*="card"],
+[class*="modal"],
+[class*="formContainer"] {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
